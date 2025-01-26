@@ -11,5 +11,5 @@ spec:
       targetPort: {{ .Values.service.targetPort }}
       protocol: {{ .Values.service.protocol }}
       name: {{ .Values.service.name }}
- selector:
+  selector:
     {{- include "java-chart.selectorLabels" . | nindent 4 }}
